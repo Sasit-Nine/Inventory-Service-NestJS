@@ -1,4 +1,5 @@
-import { IsOptional, IsString, IsNumber } from 'class-validator';
+import { IsOptional, IsString, IsNumber, IsNumberString } from 'class-validator';
+import { Transform } from 'class-transformer';
 export class CreateInventoryDto {
   @IsString()
   name: string;
@@ -11,4 +12,6 @@ export class CreateInventoryDto {
   @IsOptional()
   @IsNumber()
   promotionId?: number;
+  @IsNumberString()
+  test: number;
 }

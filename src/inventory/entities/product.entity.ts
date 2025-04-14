@@ -13,6 +13,8 @@ export class Product {
   quantity: number;
   @Column()
   price: number;
+  @Column()
+  testSync: string;
   @ManyToOne(() => Promotion, (promotion) => promotion.products)
   promotions: Promotion[];
 }
